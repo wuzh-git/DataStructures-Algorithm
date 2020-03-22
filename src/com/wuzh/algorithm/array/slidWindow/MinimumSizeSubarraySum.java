@@ -20,6 +20,7 @@ public class MinimumSizeSubarraySum {
 
     /**
      * 使用两个指针完成滑动窗口，时间复杂度O(n),空间复杂度O(1)
+     *
      * @param s
      * @param nums
      * @return
@@ -35,10 +36,10 @@ public class MinimumSizeSubarraySum {
             //确保r指针不越界,sum小于s则r指针右移
             if (r + 1 < nums.length && sum < s) {
                 r++;
-                sum += r;
+                sum += nums[r];
             } else {
                 //sum>=s,表示找到子数组，但要找最小子数组，则需要sum先减l,l指针在右移
-                sum -= l;
+                sum -= nums[l];
                 l++;
             }
             //如果找打子数组和>=s则比对长度，取最小值
@@ -54,8 +55,10 @@ public class MinimumSizeSubarraySum {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 3, 1, 2, 4, 3};
-        int s = 7;
+        /*int[] nums = {2, 3, 1, 2, 4, 3};
+        int s = 7;*/
+        int[] nums = {1, 4, 4};
+        int s = 4;
         int length = minSubArrayLen(s, nums);
         System.out.println(length);
     }
