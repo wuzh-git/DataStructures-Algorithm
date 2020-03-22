@@ -42,7 +42,6 @@ public class BinarySearch {
             if (i != binarySearch(data, n, i)) {
                 throw new IllegalStateException("查找i失败");
             }
-            System.out.println(i);
         }
         long endTime = System.currentTimeMillis();
 //        System.out.println(i);
