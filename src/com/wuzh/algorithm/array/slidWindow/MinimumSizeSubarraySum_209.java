@@ -16,7 +16,7 @@ package com.wuzh.algorithm.array.slidWindow;
  * 如果你已经完成了O(n) 时间复杂度的解法, 请尝试 O(n log n) 时间复杂度的解法。
  * @create 2020-03-22 22:43
  */
-public class MinimumSizeSubarraySum {
+public class MinimumSizeSubarraySum_209 {
 
     /**
      * 使用两个指针完成滑动窗口，时间复杂度O(n),空间复杂度O(1)
