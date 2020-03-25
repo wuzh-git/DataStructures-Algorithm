@@ -1,4 +1,4 @@
-package com.wuzh.algorithm.array.hashtable;
+package com.wuzh.algorithm.hashtable;
 
 /**
  * @author wzh
