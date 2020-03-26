@@ -1,4 +1,4 @@
-package com.wuzh.algorithm.setmap;
+package com.wuzh.algorithm.hashtable;
 
 import java.util.HashSet;
 import java.util.Set;

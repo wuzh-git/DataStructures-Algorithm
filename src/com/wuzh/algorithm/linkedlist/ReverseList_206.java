@@ -18,38 +18,24 @@ public class ReverseList_206 {
         ListNode pre = null;
         ListNode cur = head;
         while (cur != null) {
+
             ListNode next = cur.next;
             //反转
             cur.next = pre;
             pre = cur;
             cur = next;
         }
-        return cur;
+        return pre;
     }
 
     public static void main(String[] args) {
-        ListNode cur = new ListNode(1);
-        ListNode next = new ListNode(2);
-        for (int i = 3; i <= 5; i++) {
-            ListNode node = new ListNode(i);
-
-
-        }
-        ListNode reverseNode = reverseList(cur);
-        while (reverseNode != null) {
-            System.out.println(reverseNode.val);
-            reverseNode = reverseNode.next;
-        }
+        int[] arr = {1, 2, 3, 4, 5};
+        ListNode linkedList = CreatePrintLinkedListUtil.createLinkedList(arr);
+        ListNode reverseNode = reverseList(linkedList);
+        CreatePrintLinkedListUtil.printLinkedList(reverseNode);
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
 
-        ListNode(int x) {
-            val = x;
-        }
-    }
 }
 
 

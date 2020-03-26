@@ -1,4 +1,4 @@
-package com.wuzh.algorithm.setmap;
+package com.wuzh.algorithm.hashtable;
 
 /**
  * @author wuzh
