@@ -17,22 +17,25 @@ package com.wuzh.algorithm.linkedlist;
 public class DeleteDuplicates_83 {
 
     public static ListNode deleteDuplicates(ListNode head) {
-        if (head==null){
+        if (head == null) {
             return null;
         }
         //虚拟头节点
-        ListNode dummyNode=new ListNode(0);
-        dummyNode.next=head;
-        ListNode curNode=dummyNode;
-        while (curNode.next!=null){
-
+        ListNode dummyNode = new ListNode(head.val - 1);
+        dummyNode.next = head;
+        ListNode curNode = dummyNode;
+        while (curNode != null && curNode.next != null) {
+            if (curNode.val == curNode.next.val) {
+                curNode.next = curNode.next.next;
+            } else {
+                curNode = curNode.next;
+            }
         }
-
-        return null;
+        return dummyNode.next;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 1, 2, 3, 3};
+        int[] arr = {1,1,1};
         ListNode head = CreatePrintLinkedListUtil.createLinkedList(arr);
         ListNode node = deleteDuplicates(head);
         CreatePrintLinkedListUtil.printLinkedList(node);

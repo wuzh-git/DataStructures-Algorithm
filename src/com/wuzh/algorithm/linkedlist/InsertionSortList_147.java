@@ -24,4 +24,19 @@ package com.wuzh.algorithm.linkedlist;
  */
 public class InsertionSortList_147 {
 
+    public static ListNode insertionSortList(ListNode head) {
+        ListNode curNode=head;
+        while (curNode.next!=null){
+
+        }
+
+        return null;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {4, 2, 1, 3};
+        ListNode head = CreatePrintLinkedListUtil.createLinkedList(arr);
+        ListNode node = insertionSortList(head);
+        CreatePrintLinkedListUtil.printLinkedList(node);
+    }
 }

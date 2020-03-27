@@ -18,7 +18,6 @@ public class ReverseList_206 {
         ListNode pre = null;
         ListNode cur = head;
         while (cur != null) {
-
             ListNode next = cur.next;
             //反转
             cur.next = pre;
